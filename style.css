@@ -1,0 +1,102 @@
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 4em;
+    margin: 0;
+    color: #ff69b4;
+}
+
+.love-message {
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #ff6347;
+}
+
+.media {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame {
+    width: 250px; /* Ancho fijo para el marco */
+    height: 325px; /* Altura fija para el marco */
+    padding: 0;
+    border: 10px solid #ff1493;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+#media-container {
+    width: 250px; /* Ancho fijo */
+    height: 325px; /* Altura fija */
+    overflow: hidden; /* Oculta contenido que exceda las dimensiones del contenedor */
+    position: relative; /* Asegura que los elementos internos se ajusten al contenedor */
+}
+
+    #media-container img,
+    #media-container video {
+        width: 250px; /* Ancho fijo */
+        height: 325px; /* Altura fija */
+        object-fit: cover; /* Ajusta el contenido al contenedor sin distorsión */
+    }
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('img/heart.png') no-repeat center center;
+    background-size: cover;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(-10vh);
+    }
+}
